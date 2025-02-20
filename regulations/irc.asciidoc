@@ -1,0 +1,122 @@
+= IRC Standard for International Railway Networks
+
+----
+Author: 7actose
+Date: 2025-02-20
+Status: Internet-Draft
+----
+
+== Abstract
+
+This document is an Internet-Draft intended to define the standards for international railway networks as established by the International Railway Consortium (IRC). It sets forth the requirements for the construction, connection, and maintenance of train stations and trains, ensuring interoperability and a consistent travel experience across the IRC Network.
+
+== 1. Introduction
+
+The International Railway Consortium wishes to establish a standard international railway network to ensure a uniform and comfortable experience for participating members. This document sets forth the standards by which trains and train stations shall be constructed, connected, and maintained. Compliance with these standards is *RECOMMENDED* to promote interoperability while preserving the autonomy of local station operators.
+
+== 2. Conventions and Definitions
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+
+For the purposes of this document, the following definitions apply:
+
+- *Train:* A mode of transit that moves between stations. Train applicability to IRC standards depends on its intended routing as described below.
+- *Station:* A designated location that serves as a node in a network. A station *MUST* be connected to at least one other networked station to be considered part of that network.
+- *Network:* A collection of at least two stations connected via train rail with the explicit intention of facilitating travel between those stations.
+- *Local/Domestic Network:* A privately owned network. The owner of a local network *MAY* be an IRC member.
+- *IRC:* The governing body responsible for overseeing the IRC Network and ensuring adherence to these standards.
+
+== 3. Network Formation and Station Connection
+
+=== Network Membership
+
+- A station *MUST* be connected to at least one other station that is a designated member of the same network in order to be considered part of that network.
+- A collection of connected stations *MUST* explicitly define their network membership. Mere physical connection *MAY* exist without the stations being part of a network unless there is a formal designation of network membership.
+
+=== Examples of Network Configurations
+
+Given stations A, B, and C connected linearly as:
+
+A — B — C
+
+- Stations A and B *MAY* form a network while station C remains outside that network.
+- Alternatively, stations B and C *MAY* form a separate network independent of station A.
+- Importantly, stations A and C *MUST NOT* form a network unless station B is also part of the network. In other words, networked stations *MUST* be connected either directly or via other networked stations, ensuring a continuous chain of connectivity.
+- Under appropriate mutual agreement, all three stations *MAY* form a single, unified network provided that each station meets the requirements for network membership.
+- A station *MAY* exist in multiple networks at once.
+
+=== Designation of Connections
+
+- Connected stations *MUST* clearly identify whether a given rail connection is intended to be part of a formal network.
+- A connection between stations *MAY* be used for general transit but does not automatically confer network membership unless explicitly designated by the station operators or governing IRC directives.
+
+== 4. Local/Domestic Networks
+
+- A Local or Domestic Network is one that is privately owned.
+- The owner of a local network *MAY* choose to integrate specific stations into the IRC Network. Integration is optional and determined on a per-station basis. If a station is integrated, the owner SHOULD ensure that any connections with the broader IRC Network are clearly delineated.
+- When integrating with the *IRC* Network, local network owners *MUST* adhere to the minimum requirements for station connectivity and network formation as described herein.
+- Local network owners *MUST* explicitly designate which stations within their network are part of the IRC Network.
+
+== 5. Governance and Amendments
+
+- The IRC reserves the right to revise or update these standards as needed.
+- Any amendments to this document *MUST* be published and communicated to all participating members in a timely manner.
+- Adherence to the latest published standards is *REQUIRED* for continued participation in the IRC Network.
+
+== 6. IRC Standards
+
+=== Stations
+
+- The IRC reserves the right to enforce these standards on any station that is designated as part of the IRC Network.
+- Only local network stations that are formally recognized as members of the IRC Network are subject to such enforcement. Local stations that are not part of the IRC Network remain outside IRC jurisdiction.
+- Stations registered in the IRC Network must accommodate the largest train as described below without major clipping.
+
+=== Trains
+
+- Trains that are intended to traverse non-local IRC networked stations *MUST* comply with all applicable IRC standards.
+- Trains that operate exclusively within a local network, even if that network includes stations that are IRC members, *MAY* not adhere to IRC standards unless they are used on routes that extend beyond the local network boundaries.
+
+==== Train Size
+
+- Trains have a maximum cross-sectional area of 5 meters wide by 7 meters tall for solid blocks, including the block that constitutes the bogey.
+  * For the purpose of this rule, a solid block is defined as a block that is approximately 1 meter along the relevant axis.
+- Non-solid blocks MAY extend the perimeter by 1 block as long as they don't extend too far and cause clipping issues.
+  * Non-solid blocks SHOULD NOT extend further than a Cobblestone Wall.
+- Trains have a maximum length of 43m. This allows for 4 carriages 10 meters long, with a 1 meter gap between carriages.
+
+----
++---+---+---+---+---+---+---+  --+
+| N | N | N | N | N | N | N |    |
++---+---+---+---+---+---+---+    |
+| N | S | S | S | S | S | N |    |
++---+---+---+---+---+---+---+    |
+| N | S | S | S | S | S | N |    |
++---+---+---+---+---+---+---+    |
+| N | S | S | S | S | S | N |    |
++---+---+---+---+---+---+---+    | 8 meters
+| N | S | S | S | S | S | N |    |
++---+---+---+---+---+---+---+    |
+| N | S | S | S | S | S | N |    |
++---+---+---+---+---+---+---+    |
+| N | S | S | S | S | S | N |    |
++---+---+---+---+---+---+---+    |
+| N | S | S | B | S | S | N |    |
++---+---+---+---+---+---+---+  --+
+
+|                           |
++---------------------------+
+          7 meters
+
+S: Solid Block
+N: Non-solid Block
+B: Bogey or Solid Block
+----
+
+=== Routes
+
+- IRC only guarantees transit between stations that are designated as part of the IRC Network.
+- IRC members are not permitted transit to local stations not part of the IRC Network unless a private agreement has been arranged between the train operator and the station operator.
+
+== 7. Conclusion
+
+This document establishes the foundational requirements for the formation and operation of rail networks under the IRC. By adhering to these standards, participating members can ensure a cohesive and interoperable railway experience while preserving local autonomy. IRC retains its authority over stations and trains that are part of the IRC Network or traverse non-local routes, while local operations that remain self-contained are exempt from these standards. All members are encouraged to provide feedback and propose improvements to further refine these standards.
